@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "odoo-development-skill": {
+      "source": "fhidalgodev/odoo-development-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "6d8c4dbe470749ca87b7aacb8a3cd6d8b9ed1c33b394e9068cc049c7806e971a"
+    }
+  }
+}

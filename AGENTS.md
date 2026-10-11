@@ -46,7 +46,7 @@ Las pruebas no deben depender de servicios reales ni compartir base o filestore 
 
 ## Skills del proyecto
 
-- Usar la skill local **`odoo-developmen-skill'`**, instalada en `.agents/skills/odoo-development-skill/SKILL.md`, para diseñar, implementar o revisar módulos Odoo: ORM, modelos, campos, vistas XML, manifiestos, seguridad, controladores y pruebas. Leer su contenido antes de aplicarla por primera vez en la conversación y consultar los recursos que indique cuando sean pertinentes.
+- Usar la skill local **`odoo-development-skill`**, instalada en `.agents/skills/odoo-development-skill/SKILL.md`, para diseñar, implementar o revisar módulos Odoo: ORM, modelos, campos, vistas XML, manifiestos, seguridad, controladores y pruebas. Leer su contenido antes de aplicarla por primera vez en la conversación y consultar los recursos que indique cuando sean pertinentes.
 - Aplicar sus pautas de separación de responsabilidades, extensión mediante herencia, uso del ORM, ACL, reglas de registro, validaciones y pruebas junto con la spec y el plan activos. Los ejemplos de la skill son orientativos: comprobar sus APIs, decoradores y sintaxis de vistas contra documentación oficial o código de la revisión objetivo de Odoo 20 antes de utilizarlos, incluidos ejemplos como `@api.multi`. No asumir compatibilidad por aparecer en la skill.
 - Mantener las decisiones de este archivo al adaptar los ejemplos: español, prefijo `qb_`, entidad fiscal propia y Python 3.12. La skill no autoriza nuevas dependencias, cambios de alcance, instalaciones ni efectos externos. Si una pauta entra en conflicto con las instrucciones del proyecto, registrar la discrepancia y aplicar las decisiones confirmadas del propietario.
 - Ejecutar las comprobaciones Python con el intérprete 3.12 del entorno aprobado y las pruebas Odoo en una base desechable. La comprobación de sintaxis no sustituye las pruebas funcionales ni de integración. Mientras el entorno no exista, documentar las comprobaciones pendientes sin presentarlas como ejecutadas.
@@ -80,7 +80,7 @@ Las pruebas no deben depender de servicios reales ni compartir base o filestore 
 
 ## Forma de trabajar
 
-1. Leer este archivo, `docs/CONSTITUTION.md` y `spec.md`, `plan.md`, `tasks.md` de la funcionalidad afectada. Para trabajos Odoo, leer y aplicar la skill local `odoo-development` conforme a la sección Skills del proyecto. Inspeccionar el repositorio antes de asumir archivos, dependencias o comandos.
+1. Leer este archivo, `docs/CONSTITUTION.md` y `spec.md`, `plan.md`, `tasks.md` de la funcionalidad afectada. Para trabajos Odoo, leer y aplicar la skill local `odoo-development-skill` conforme a la sección Skills del proyecto. Inspeccionar el repositorio antes de asumir archivos, dependencias o comandos.
 2. Seguir el flujo **especificación → plan → tareas → implementación → verificación**. No se requiere Spec Kit ni otra herramienta SDD. Si falta un requisito, redactar la propuesta y aclarar decisiones materiales antes de implementarlo; no ampliar unilateralmente el alcance.
 3. Planificar antes de cambios que afecten modelos persistentes, contratos fiscales, estados, seguridad o infraestructura. Registrar decisiones duraderas en ADR; resolver detalles rutinarios dentro de la spec sin consultas innecesarias.
 4. Implementar cambios pequeños vinculados a tareas. Evitar refactorizaciones ajenas, cambios masivos de formato y sobrescribir modificaciones del usuario.
