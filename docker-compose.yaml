@@ -1,0 +1,23 @@
+services:
+  quiboot-odoo:
+    container_name: quiboot-odoo
+    image: odoo:20
+    env_file: .env
+    # depends_on:
+    #   - quiboot-db # descomentar para entorno de desarrollo y pruebas
+    ports:
+      - "8369:8069"
+      - "8372:8072"
+    volumes:
+      - ./odoo-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+  # Descomentar para entorno de desarrollo y pruebas
+  # quiboot-db:
+  #   container_name: quiboot-db
+  #   image: postgres:18
+  #   ports:
+  #     - "5434:5432"
+  #   env_file: .env
+  #   volumes:
+  #     - ./odoo-db-data:/var/lib/postgresql/data/pgdata
